@@ -80,7 +80,7 @@ def index():
 # If this gets to be too much, we should definitely consider that
 @route("/<filename>")
 def doc(filename):
-  if filename != "privacy" and filename != "home" and filename != "about" and filename != "index":
+  if filename != "privacy" and filename != "support" and filename != "about" and filename != "consent" and filename != "home" and filename != "index":
     return HTTPError(404, "Don't try to hack me, you evil spammer")
   else:
     return static_file("%s.html" % filename, "%s/server/" % static_path)
